@@ -7,8 +7,10 @@ class App < Sinatra::Base
   end
 
   post '/' do
-    text_from_user = params[:user_text]
-
-    erb :results
+  @analyzed_text = TextAnalyzer.new(params[:user_text])
+ 
+  erb :results
+  #using form input to initalize instance of TextAnalyzer class
+  #instance and its methods saved to @analyzed_text can now be used in erb :result 
   end
 end
