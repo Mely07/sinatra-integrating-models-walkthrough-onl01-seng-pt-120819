@@ -41,7 +41,4 @@ class TextAnalyzer
      biggest
   end
 
-  # def most_used_letter_count
-  #   most_used_letter.first[1]
-  # end
 end
